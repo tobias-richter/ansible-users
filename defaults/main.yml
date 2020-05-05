@@ -1,0 +1,22 @@
+users_default_shell: /bin/bash
+users_default_groups:
+  - users
+
+users_default: []
+#  - name: john_doe
+#    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
+#    authorized_keys:
+#      - key: ssh-rsa ....
+#      # some absent key
+#      - key: ssh-rsa ....
+#        state: absent
+
+users_custom: []
+
+#  - name: jane_doe
+#    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
+#    authorized_keys:
+#      - key: ssh-rsa ....
+#      # some absent key
+#      - key: ssh-rsa ....
+#        state: absent

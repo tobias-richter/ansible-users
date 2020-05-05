@@ -1,0 +1,17 @@
+galaxy_info:
+  role_name: users
+  author: Tobias Richter
+  description: Ansible Role for managing users.
+  license: Apache
+  min_ansible_version: 2.7
+
+  platforms:
+  - name: GenericBSD
+    versions:
+      - any
+  - name: GenericLinux
+    versions:
+      - any
+  - name: GenericUNIX
+    versions:
+      - any

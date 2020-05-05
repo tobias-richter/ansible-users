@@ -1,0 +1,19 @@
+- name: "user : create/manage group for {{ user.name }}."
+  group:
+    name: "{{ user.group | default(user.name) }}"
+
+- name: "user : create / manage user {{ user.name }}."
+  user:
+    name: "{{ user.name }}"
+    shell: "{{ user.shell | default(users_default_shell) }}"
+    password: "{{ user.password | default(omit) }}"
+    group: "{{ user.group | default(user.name) }}"
+    groups: "{{ user.groups | default(users_default_groups) }}"
+    append: no
+
+- name: "user : manage authorized keys for {{ user.name }}."
+  include_tasks: authorized_key.yml
+  with_items: "{{ user.authorized_keys | default([]) }}"
+  vars:
+  loop_control:
+    loop_var: authorized_key
