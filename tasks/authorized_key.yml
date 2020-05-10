@@ -3,4 +3,3 @@
     user: "{{ user.name }}"
     state: "{{ authorized_key.state | default('present') }}"
     key: "{{ authorized_key.key }}"
-
