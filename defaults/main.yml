@@ -1,18 +1,24 @@
+# The default shell for the users
 users_default_shell: /bin/bash
 users_default_groups:
   - users
 
+# Default users, can be placed in group_vars/all.yml
 users_default: []
 #  - name: john_doe
-#    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
+#    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module), optional
+#    shell: /some/custom/shell
+#    group: john_doe # users primary group, defaults to username
+#    groups: [] additional user groups
+#    append: no #
 #    authorized_keys:
 #      - key: ssh-rsa ....
 #      # some absent key
 #      - key: ssh-rsa ....
 #        state: absent
 
+# Custom users, can be placed in host_vars
 users_custom: []
-
 #  - name: jane_doe
 #    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module)
 #    authorized_keys:
