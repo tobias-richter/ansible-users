@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tobias-richter/ansible-users.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-users)
 
-This role manages users on linux systems.
+This role manages users (including, passwords and ssh keys) on linux systems.
 
 ## Requirements
 
