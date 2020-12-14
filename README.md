@@ -1,6 +1,6 @@
 # tobias_richter.users
 
-[![Build Status](https://travis-ci.org/tobias-richter/ansible-users.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-users)
+[![Build Status](https://github.com/tobias-richter/ansible-users/workflows/CI/badge.svg)](https://github.com/tobias-richter/ansible-users/actions)
 
 This role manages users (including, passwords and ssh keys) on linux systems.
 
