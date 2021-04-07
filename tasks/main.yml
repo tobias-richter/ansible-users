@@ -1,3 +1,4 @@
+---
 - name: "create default users"
   include_tasks: user.yml
   with_items: "{{ users_default | union(users_custom) }}"

@@ -1,3 +1,4 @@
+---
 - name: "user : create/manage group for {{ user.name }}."
   group:
     name: "{{ user.group | default(user.name) }}"

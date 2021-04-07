@@ -1,3 +1,4 @@
+---
 - name: "key : manage authorized key for {{ user.name }}"
   authorized_key:
     user: "{{ user.name }}"

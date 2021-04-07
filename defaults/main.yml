@@ -1,3 +1,4 @@
+---
 # The default shell for the users
 users_default_shell: /bin/bash
 users_default_groups:
