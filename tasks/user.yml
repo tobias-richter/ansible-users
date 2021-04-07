@@ -6,6 +6,8 @@
   user:
     name: "{{ user.name }}"
     shell: "{{ user.shell | default(users_default_shell) }}"
+    home: "{{ user.home | default(omit) }}"
+    move_home: "{{ user.move_home | default(omit) }}"
     password: "{{ user.password | default(omit) }}"
     group: "{{ user.group | default(user.name) }}"
     groups: "{{ user.groups | default(users_default_groups) }}"

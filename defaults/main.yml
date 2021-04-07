@@ -8,6 +8,8 @@ users_default: []
 #  - name: john_doe
 #    password: SOME_PASSWORD #(see https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#how-do-i-generate-encrypted-passwords-for-the-user-module), optional
 #    shell: /some/custom/shell
+#    home: /path to home
+#    move_home: see https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
 #    group: john_doe # users primary group, defaults to username
 #    groups: [] additional user groups
 #    append: no #
