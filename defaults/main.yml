@@ -29,3 +29,7 @@ users_custom: []
 #      # some absent key
 #      - key: ssh-rsa ....
 #        state: absent
+
+
+users_absent: []
+# - deleteme

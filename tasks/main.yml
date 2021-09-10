@@ -1,6 +1,12 @@
 ---
-- name: "create default users"
+- name: "create / update users."
   include_tasks: user.yml
   with_items: "{{ users_default | union(users_custom) }}"
   loop_control:
     loop_var: user
+
+- name: "remove users."
+  user:
+    name: "{{ item }}"
+    state: absent
+  with_items: "{{ users_absent }}"
