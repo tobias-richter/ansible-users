@@ -14,6 +14,7 @@ users_default: []
 #    group: john_doe # users primary group, defaults to username
 #    groups: [] additional user groups
 #    append: no #
+#    history: no # default is yes, enabled disables history
 #    authorized_keys:
 #      - key: ssh-rsa ....
 #      # some absent key
