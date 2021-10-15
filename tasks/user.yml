@@ -15,9 +15,6 @@
     append: "{{ user.append | default('no') }}"
   register: _user_result
 
-- debug:
-    var: _user_result
-
 - name: "user : manage authorized keys for {{ user.name }}."
   include_tasks: authorized_key.yml
   with_items: "{{ user.authorized_keys | default([]) }}"
@@ -33,6 +30,7 @@
     state: "{{ 'present' if not (user.history | default('yes') | bool) else 'absent' }}"
     owner: "{{ user.name }}"
     group: "{{ user.group | default(user.name) }}"
+    mode: 0660
     block: |
       set +o history
 
