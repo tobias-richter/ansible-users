@@ -27,9 +27,12 @@
 
 - name: "user : manage history."
   blockinfile:
+    create: yes
     path: "{{ _user_result.home }}/.bashrc"
     marker: "# {mark} tobias_richter.users history"
     state: "{{ 'present' if not (user.history | default('yes') | bool) else 'absent' }}"
+    owner: "{{ user.name }}"
+    group: "{{ user.group | default(user.name) }}"
     block: |
       set +o history
 
