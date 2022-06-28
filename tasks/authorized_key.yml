@@ -2,5 +2,11 @@
 - name: "key : manage authorized key for {{ user.name }}"
   authorized_key:
     user: "{{ user.name }}"
-    state: "{{ authorized_key.state | default('present') }}"
+    state: "{{ authorized_key.state | default(omit) }}"
     key: "{{ authorized_key.key }}"
+    key_options: "{{ authorized_key.key_options | default(omit) }}"
+    comment: "{{ authorized_key.comment | default(omit) }}"
+    exclusive: "{{ authorized_key.exclusive | default(omit) }}"
+    follow: "{{ authorized_key.follow | default(omit) }}"
+    manage_dir: "{{ authorized_key.manage_dir | default(omit) }}"
+    path: "{{ authorized_key.path | default(omit) }}"

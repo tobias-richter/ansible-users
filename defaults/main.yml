@@ -17,6 +17,12 @@ users_default: []
 #    history: no # default is yes, enabled disables history
 #    authorized_keys:
 #      - key: ssh-rsa ....
+#        key_options: None
+#        comment: None
+#        exclusive: None
+#        follow: None
+#        manage_dir: None
+#        path: None
 #      # some absent key
 #      - key: ssh-rsa ....
 #        state: absent
