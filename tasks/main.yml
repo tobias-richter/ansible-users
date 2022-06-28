@@ -6,7 +6,7 @@
     loop_var: user
 
 - name: "remove users."
-  user:
+  ansible.builtin.user:
     name: "{{ item }}"
     state: absent
   with_items: "{{ users_absent }}"

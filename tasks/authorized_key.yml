@@ -1,6 +1,6 @@
 ---
 - name: "key : manage authorized key for {{ user.name }}"
-  authorized_key:
+  ansible.builtin.authorized_key:
     user: "{{ user.name }}"
     state: "{{ authorized_key.state | default(omit) }}"
     key: "{{ authorized_key.key }}"

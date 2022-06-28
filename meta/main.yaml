@@ -9,10 +9,10 @@ galaxy_info:
   platforms:
     - name: GenericBSD
       versions:
-        - any
+        - all
     - name: GenericLinux
       versions:
-        - any
+        - all
     - name: GenericUNIX
       versions:
-        - any
+        - all
